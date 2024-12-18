@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+
+.navbar {
+    margin: -5rem; /* Remove any extra margin */
+    margin-left:-2px;
+    padding: 0;
+    height: 200px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    max-width: 1270px;
+    width: 100%; /* Ensures navbar uses full available width */
+}
+
+.nav-logo {
+    margin-left: 20px; /* Align logo directly to the left */
+    height: 200px;
+    width: 200px;
+    margin-right: 10px; /* Add a small gap between the logo and the search bar */
+}
+
+.logo {
+    background-image: url("../image/boibitan.jpg");
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav-search {
+    display: flex;
+    background-color: pink;
+    width: 600px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.search-input {
+    width: 100%;
+}
+
+.order_track p,
+.help_center p {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+    cursor: pointer;
+}
+
+.order_track p:hover,
+.help_center p:hover {
+    border: 2px solid lightgray;
+    border-radius: 4px;
+}
+
+.container {
+    margin:5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 55px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #f5f1f1;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    color: orangered;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    height: 200px;
+    max-height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    margin-left: 55px;
+    height:auto;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.middle {
+    width: 100%; /* Full width by default */
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 20px auto; /* Center the content */
+    padding: 10px 0;
+    margin-left: 55px; /* Remove fixed margin to prevent content from being cut */
+    margin-right: auto; /* Center the content horizontally */
+}
+
+.hsc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.hsc .left {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+    cursor: pointer;
+}
+
+.hsc .right {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hsc .right:hover {
+    color: darkorange;
+}
+
+.hsc .left:hover {
+    color: #003366;
+}
+
+.login-container {
+    margin-top: 6px;
+}
+
+.top-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Media Query for Screen Width <= 599px */
+@media (max-width: 599px) {
+    .order_track,
+    .help_center {
+        display: none; /* Hide order_track and help_center */
+    }
+}
+
+/* Media Query for Screen Width <= 950px */
+@media (max-width: 950px) {
+    .nav-search {
+        display: none; /* Hide the search bar */
+    }
+}
+
+/* Media Query for Screen Width <= 800px */
+@media (max-width: 800px) {
+    .Main {
+        display: none; /* Hide the main section */
+    }
+}
+
+/* Media Query for Screen Width > 800px */
+@media (min-width: 801px) {
+    .Main {
+        display: block; /* Show the main section */
+    }
+}
+@media (max-width: 950px) {
+    .middle {
+        padding: 8px 0; /* Reduce vertical padding */
+        max-width: 90%; /* Reduce width for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .middle {
+        padding: 5px 0; /* Further reduce vertical padding */
+        max-width: 95%; /* Make width nearly full screen */
+    }
+}
+
+@media (max-width: 400px) {
+    .middle {
+        padding: 5px; /* Minimal padding */
+        max-width: 100%; /* Use the full width of the screen */
+    }
+}
+/* .book-show{
+   display:grid;
+   max-width:1200px;
+   grid-template-columns: repeat(8, 1fr);
+   
+   margin-left:55px;
+   border:1px solid white;
+}
+.book-show .size{
+    margin: 2px;
+    justify-content: space-evenly;
+} */
+.book-show {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 equal columns */
+    gap: 10px; /* Add equal spacing between grid items */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+    margin-left: 55px;
+    border: 1px solid white;
+}
+
+.book-show .size {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in height/width */
+    height: 100%; /* Equal height for all grid items */
+    border: 1px solid #ccc;
+}
+
+.book-show .size img {
+    width: 100%; /* Make image responsive */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: contain; /* Keep aspect ratio and ensure image fits */
+    margin-bottom: 10px;
+}
+
+.book-show .size p {
+    margin: 0; /* Remove default margins */
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4; /* Consistent line height */
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 1200px) {
+    .book-show {
+        grid-template-columns: repeat(6, 1fr); /* 6 columns on smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .book-show {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .book-show {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .book-show {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    }
+}
+
+
+.subscribe {
+    margin:4rem;
+    display: flex;
+    justify-content: space-between; /* Evenly space child elements */
+    align-items: center;
+}
+
+.subscribe .a {
+    text-align: left; /* Align content to the left */
+}
+
+.subscribe .b {
+    display:flex;
+    justify-content:flex-end;
+    width:50%;
+    margin-right:0px;
+}
+
+.subscribe .b .search-input1 {
+    width: 300px; /* Increase input bar width */
+    padding: 5px; /* Add slight padding for better appearance */
+    font-size: 14px; /* Adjust font size */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+.subscribe .text p {
+    margin-bottom: 5px; /* Adds extra space between paragraphs */
+}
+.text-c{
+     color:#183F72;
+}
+.b {
+    display: flex;
+    background-color: pink;
+    width: 600px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.search-b {
+    
+    width: 100%;
+}
